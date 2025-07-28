@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to right, #FFD8C6, #FFF2BD);
+    color: #3b2d2d;
+}
+
+header {
+    background: transparent;
+    padding: 5px 60px; /* зменшено верхній падінг для підняття заголовка */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-size: 16px;
+}
+
+.sign-up {
+    background: #ffc1c1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 40px;
+}
+
+.about .text {
+    width: 60%;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about p, .about ul {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about ul {
+    padding-left: 20px;
+}
+
+.about ul li {
+    list-style: disc;
+}
+
+.about .images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about .images img.rounded {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.about .images img.rounded:first-child {
+    margin-left: -100px;
+}
+
+.preparation {
+    padding: 60px;
+    text-align: center;
+}
+
+.preparation h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #3b2d2d;
+}
+
+.prep-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.prep-item {
+    background: #fff4c8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
+    width: 280px;
+}
+
+.prep-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.prep-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.prep-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #3b2d2d;
+}
+
+.prep-item ul li {
+    margin-bottom: 5px;
+}
+
+.specialists-section {
+    background: linear-gradient(to left, #fdc9a6, #ffec9f, #ffc1c1);
+    padding: 60px;
+    text-align: center;
+}
+
+.specialists-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.specialist-card {
+    background: #fff5dd;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.specialist-card:hover {
+    transform: translateY(-5px);
+}
+
+.specialist-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.specialist-info h3 {
+    font-size: 18px;
+    color: #3b2d2d;
+    margin-bottom: 5px;
+}
+
+.specialist-info p {
+    font-size: 15px;
+    color: #555;
+}
+
+/* Додано стилі для блоку Mental Support */
+.mental-help-section {
+    padding: 60px;
+    background: linear-gradient(to right, #ffc1c1, #fff2bd);
+    color: #3b2d2d;
+    text-align: center;
+}
+
+.mental-help-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.mental-help-content {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.mental-help-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.mental-help-text ul {
+    padding-left: 20px;
+    margin: 15px 0;
+    list-style: disc;
+}
+
+.mental-help-text ul li {
+    margin-bottom: 8px;
+}
+
+.mental-help-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mental-help-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* 🌐 Мобільна адаптація */
+@media (max-width: 600px) {
+    .specialist-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+    }
+
+    .specialist-card img {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mental-help-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mental-help-text {
+        order: 2;
+        width: 100%;
+    }
+    .mental-help-image {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    .mental-help-image img {
+        max-width: 80%;
+    }
+}
+
+.vlogs-section {
+    padding: 80px 60px;
+    background: linear-gradient(to right, #FFD8C6, #FFF2BD);
+    text-align: center;
+}
+
+.vlogs-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #3b2d2d;
+}
+
+.vlog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.vlog-item {
+    width: 300px;
+}
+
+.vlog-item iframe {
+    width: 100%;
+    height: 170px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.vlog-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #4a3d3d;
+}
+
+.site-footer {
+    background: linear-gradient(to right, #ffccbb, #ffe4b5);
+    padding: 40px 60px 20px;
+    color: #3b2d2d;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: #3b2d2d;
+    transition: color 0.3s;
+}
+
+.footer-nav li a:hover {
+    color: #a35959;
+}
+
+.footer-contacts p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #d9b9a1;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #7a5b5b;
+}
+
+/* Mobile responsive footer */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffb01d;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+/* Анімація появи */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.section-visible {
+  animation-name: fadeUp;
+  animation-fill-mode: forwards;
+  animation-duration: 2.6s;
+  animation-timing-function: ease-out;
+  /* animation-delay буде задаватися з JS */
+}
+
+
+
+.scroll-to-top:hover {
+  opacity: 1;
+  background-color: #555;
+}
+
